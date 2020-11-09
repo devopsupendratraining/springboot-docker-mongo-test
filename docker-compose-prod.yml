@@ -3,7 +3,7 @@ services:
   springboot:
    environment:
    - MONGO_DB_USERNAME=proddb
-   - MONGO_DB_PASSWORD=prodb123
+   - MONGO_DB_PASSWORD=proddb123
 
   mongo:
     environment:
