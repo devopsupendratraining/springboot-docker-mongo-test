@@ -56,7 +56,7 @@ agent any
 					}
 			}
 	 
-	 stage("docker compose for ite"){
+	 stage("docker compose for prod"){
 					steps{
 
 						sshagent(['dockerun']) {
