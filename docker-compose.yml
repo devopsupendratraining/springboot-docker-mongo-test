@@ -6,14 +6,14 @@ services:
     restart: always # This will be ignored if we deploy in docker swarm
     environment:
     - MONGO_DB_HOSTNAME=mongo
-    
+
     ports:
       - 8080:8080
     working_dir: /opt/app
     depends_on:
       - mongo
     networks:
-    - springappnetwork  
+    - springappnetwork
     deploy:  # This will be considered only in docker swarm.
       replicas: 2
       update_config:
@@ -26,18 +26,16 @@ services:
 
   mongo:
     image: mongo
-    environment:
-    
     volumes:
       - mongodb:/data/db
     restart: always
     networks:
     - springappnetwork
-    
+
 volumes:
   mongodb:
     #external: true
-    
+
 networks:
   springappnetwork:
     #external: true
