@@ -27,7 +27,7 @@ agent any
    
   stage("docker image build"){
 			steps{
-				//sh "docker build -t  ragula001/springboot-mongo-docker:${BUILD_NUMBER} . "
+				sh "docker build -t  ragula001/springboot-mongo-docker:${BUILD_NUMBER} . "
 				
 			}
 	}
@@ -36,7 +36,7 @@ agent any
 			steps{
 			
 				withCredentials([string(credentialsId: 'dock_hub_pwd', variable: 'docker_hub_pwd')]) {
-					//sh "docker login -u ragula001 -p ${docker_hub_pwd}"
+					sh "docker login -u ragula001 -p ${docker_hub_pwd}"
 				}
 				sh "docker push ragula001/springboot-mongo-docker:${BUILD_NUMBER}"  
 				
