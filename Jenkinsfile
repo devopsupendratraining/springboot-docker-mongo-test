@@ -13,7 +13,7 @@ agent any
    stage("Git Checkout"){
       steps{
 	      
-       git  url: 'https://github.com/devopsupendratraining/maven-web-application.git'
+       git credentialsId: '8081002c-b145-4930-89e6-6da5a0bb598d', url: 'https://github.com/devopsupendratraining/springboot-docker-mongo-test.git'
 	     // https://<USERNAME>:<PASSWORD>@github.com/path/to/repo.git
       }
     }
