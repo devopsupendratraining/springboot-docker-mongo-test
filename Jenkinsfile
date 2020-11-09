@@ -62,7 +62,7 @@ agent any
 						sshagent(['dockerun']) {
 							sh 'scp -o StrictHostKeyChecking=no  docker-compose.yml  ubuntu@13.235.82.132:'
 							sh 'scp -o StrictHostKeyChecking=no  docker-compose-ite.yml ubuntu@13.235.82.132:'
-							//sh 'ssh ubuntu@13.235.82.132 docker-compose -f docker-compose.yml -f docker-compose-ite.yml up -d'
+							sh 'ssh ubuntu@13.235.82.132 docker-compose -f docker-compose.yml -f docker-compose-ite.yml up -d'
 							//sh 'ssh ubuntu@15.207.16.144 docker-compose up -d'
 						}
 
