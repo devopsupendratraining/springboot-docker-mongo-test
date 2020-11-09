@@ -42,7 +42,17 @@ agent any
 			}
 	}
 	  
-  
+		  stage("run docker image in container"){
+					steps{
+
+						sshagent(['dockerun']) {
+							sh 'scp -o StrictHostKeyChecking=no  docker-compose.yml ubuntu@15.207.16.144:'
+						}
+
+					}
+			}
+
+	 
   
   
  
