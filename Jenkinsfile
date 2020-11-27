@@ -43,7 +43,7 @@ agent any
 			}
 	}
 	  
-		  stage("docker compose for dev"){
+		  /*stage("docker compose for dev"){
 					steps{
 
 						sshagent(['dockerun']) {
@@ -81,7 +81,7 @@ agent any
 
 					}
 			}
-
+          */
 
  
  }
